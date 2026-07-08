@@ -2,7 +2,7 @@
 
 int main(){
 
-	int number1,number2;
+	int number1,number2,result;
 	char op;
 
 	printf("enter number1:");
@@ -12,14 +12,11 @@ int main(){
 	scanf("%d",&number2);
 
 	printf("Do you want to + or - ?");
-	scanf("%s",&op);
+	scanf(" %c",&op);
 
-    int result=number1+number2;
 
-    int result2=number1-number2;
+	result= op=='+' ? number1+number2 : number1-number2 ;
 
-	char result3=(op == "+") ? result:result2;
-
-	printf("your result is: %d",result3);
+	printf("your result is: %d",result);
 
 }
